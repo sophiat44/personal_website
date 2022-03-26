@@ -1,0 +1,36 @@
+/*-------------------------------------------*\
+   footer-type-2.scss
+
+   Footer type 2 styles
+\*-------------------------------------------*/
+
+.footer-type-2 {
+  padding: 75px 0 40px 0;
+  @media (max-width: $lg) {
+    padding: 50px 0 30px 0;
+  }
+  .inner-wrapper {
+    .footer-sidebar {
+
+    }
+
+    .copyright-wrapper {
+      margin-top: 55px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border-color-1);
+      display: flex;
+      justify-content: center;
+      @media (max-width: $lg) {
+        margin-top: 40px;
+        padding-top: 30px;
+      }
+
+      .copyright {
+        font-weight: 500;
+        font-size: 14px;
+        text-align: center;
+        color: var(--black-color);
+      }
+    }
+  }
+}

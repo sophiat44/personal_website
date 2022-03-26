@@ -1,0 +1,81 @@
+/*-------------------------------------------*\
+   video-toggle-type-7.scss
+
+   Video toggle type 7 styles
+\*-------------------------------------------*/
+
+.video-toggle-button-type-7 {
+  .video-toggle-inner {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white-color);
+    border-radius: 100%;
+    position: relative;
+    transition: all .3s ease-in-out;
+
+    i {
+      color: var(--primary-color);
+      font-size: 18px;
+      position: relative;
+      z-index: 10;
+      transition: all .3s ease-in-out;
+    }
+
+    &:before, &:after {
+      content: '';
+      display: flex;
+      background-color: var(--white-color);
+      position: absolute;
+      border-radius: 100%;
+      transition: all .3s ease-in-out;
+    }
+
+    &:before {
+      opacity: 0.5;
+      top: -15px;
+      left: -15px;
+      width: 110px;
+      height: 110px;
+      z-index: 2;
+    }
+
+    &:after {
+      opacity: 0.2;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      width: 140px;
+      height: 140px;
+      z-index: 1;
+      animation: toggle-animation 3s linear infinite;
+    }
+
+    &:hover {
+      background-color: var(--primary-color);
+
+      i {
+        color: var(--white-color);
+      }
+
+      &:before, &:after {
+        background-color: var(--primary-color);
+      }
+    }
+  }
+
+  @keyframes toggle-animation {
+    0% {
+      width: 140px;
+      height: 140px;
+      opacity: 0.2;
+    }
+    100% {
+      width: 160px;
+      height: 160px;
+      opacity: 0;
+    }
+  }
+}

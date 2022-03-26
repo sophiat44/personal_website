@@ -1,0 +1,105 @@
+/*-------------------------------------------*\
+   accordion-type-3.scss
+
+   Accordions type 3 styles
+\*-------------------------------------------*/
+
+.accordion-type-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .accordion-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+
+    .item-header {
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all .3s ease-in-out;
+      padding: 15px 0;
+      @media(max-width: $md) {
+        padding: 10px 0;
+      }
+
+      .header-title {
+        font-weight: 600;
+        color: var(--black-color);
+        transition: all .2s ease-in-out;
+        display: flex;
+        position: relative;
+        align-items: center;
+
+        &:before {
+          content: ' ';
+          display: flex;
+          width: 10px;
+          min-width: 10px;
+          height: 2px;
+          background-color: var(--black-color);
+          margin-right: 15px;
+        }
+
+        &:after {
+          content: ' ';
+          display: flex;
+          width: 2px;
+          height: 10px;
+          transition: all .2s ease-in-out;
+          background-color: var(--black-color);
+          position: absolute;
+          left: 4px;
+        }
+      }
+
+      &:hover {
+        .header-title {
+          color: var(--primary-color);
+        }
+      }
+    }
+
+    .item-body {
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      .body-content {
+        color: var(--text-color);
+        padding: 5px 0 15px 0;
+        overflow: hidden;
+      }
+    }
+
+    &:not(.accordion-item-active) {
+      .item-body {
+        height: 0;
+        opacity: 0;
+      }
+    }
+
+    &.accordion-arrow-active {
+      .item-header {
+        .header-title {
+          color: var(--primary-color);
+
+          &:after, &:before {
+            background-color: var(--primary-color);
+          }
+
+          &:after {
+            height: 0;
+          }
+        }
+      }
+    }
+  }
+}

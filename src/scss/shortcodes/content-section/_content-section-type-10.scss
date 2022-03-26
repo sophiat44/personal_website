@@ -1,0 +1,120 @@
+/*-------------------------------------------*\
+   content-section-type-10.scss
+
+   Content section type 10 styles
+\*-------------------------------------------*/
+
+.content-section-type-10 {
+
+  .inner-wrapper {
+    width: 100%;
+    align-items: center;
+    @media(max-width: $lg) {
+      padding-bottom: 15px;
+    }
+    .column {
+      &.images-wrapper {
+        padding-right: 75px;
+        position: relative;
+        @media(max-width: $xl) {
+          padding-right: 50px;
+        }
+        @media(max-width: $md) {
+          margin-bottom: 10px;
+          padding-right: 15px;
+        }
+        .tilt-wrapper {
+          transform-style: preserve-3d;
+          transform: perspective(1000px);
+
+          .image {
+            img {
+              border-radius: 5px;
+            }
+
+            &.default-image {
+              padding-bottom: 45px;
+              padding-left: 45px;
+              @media(max-width: $md) {
+                padding: 0;
+              }
+            }
+
+            &.image-top {
+              position: absolute;
+              z-index: 10;
+              bottom: 15px;
+              left: 15px;
+              transform: translateZ(35px) !important;
+              @media(max-width: $md) {
+                position: relative;
+                bottom: 0;
+                left: 0;
+                transform: unset !important;
+                margin-top: 30px;
+              }
+
+              img {
+                height: auto;
+                max-width: 450px;
+                @media(max-width: $xl) {
+                  max-width: 350px;
+                }
+                @media(max-width: $md) {
+                  max-width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.title-wrapper {
+        padding-left: 50px;
+        @media(max-width: $xl) {
+          padding-left: 15px;
+        }
+        @media(max-width: $lg) {
+          max-width: 100%;
+          width: 100%;
+          padding: 0 15px;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .title {
+          color: var(--white-color);
+          margin-bottom: 25px;
+          @media(max-width: $xl) {
+            margin-bottom: 15px;
+          }
+          @media(max-width: $lg) {
+            margin-bottom: 10px;
+          }
+        }
+
+        .content {
+          color: var(--white-color);
+          padding-right: 100px;
+          @media(max-width: $xl) {
+            padding-right: 30px;
+          }
+          @media(max-width: $md) {
+            padding-right: 0;
+          }
+        }
+
+        .button-wrapper {
+          margin-top: 25px;
+          @media(max-width: $xl) {
+            margin-top: 15px;
+          }
+          @media(max-width: $lg) {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,194 @@
+/*-------------------------------------------*\
+   posts-slider-type-4.scss
+
+   Posts slider type 4 styles
+\*-------------------------------------------*/
+
+.posts-slider-type-4 {
+  position: relative;
+
+  .swiper-container {
+    border-radius: 10px;
+    overflow: hidden;
+
+    .swiper-wrapper {
+      .swiper-slide {
+        .inner-wrapper {
+          display: flex;
+          align-items: flex-end;
+          border-radius: 10px;
+          overflow: hidden;
+
+          .post-body {
+            position: relative;
+            z-index: 10;
+            padding: 30px;
+            height: 100%;
+
+            .tags-list {
+              margin-bottom: 15px;
+              display: flex;
+              align-items: center;
+
+              li {
+                .tag {
+                  display: flex;
+                  align-items: center;
+                  @include meta-text(var(--white-color), 0, 500, 13px);
+
+                  i {
+                    margin-right: 5px;
+                    color: var(--white-color);
+                    opacity: 0.7;
+                    font-size: 12px;
+                  }
+                }
+
+                &:not(:last-child) {
+                  .tag {
+                    &:after {
+                      content: ',';
+                      margin-right: 7px;
+                      line-height: 1;
+                    }
+                  }
+                }
+              }
+            }
+
+            .post-title {
+              margin-bottom: 15px;
+
+              a {
+                color: var(--white-color);
+              }
+            }
+
+            .author-wrapper {
+              display: flex;
+              align-items: center;
+
+              .avatar-wrapper {
+                min-width: 45px;
+                min-height: 45px;
+                width: 45px;
+                height: 45px;
+                margin-right: 15px;
+                border-radius: 50px;
+                overflow: hidden;
+              }
+
+              .meta-data {
+                @include meta-text(var(--white-transparent-color), 0, 500, 13px);
+
+                a {
+                  color: var(--white-color);
+                }
+
+                i {
+                  font-size: 12px;
+                  margin-right: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .swiper-pagination-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -50px;
+    width: 100%;
+    z-index: 10;
+    .swiper-pagination {
+      display: flex;
+
+      .swiper-pagination-bullet {
+        width: 4px;
+        height: 4px;
+        background-color: var(--primary-color);
+        border-radius: 10px;
+        margin-left: 0;
+        margin-right: 0;
+        position: relative;
+        transition: all .2s ease-in-out;
+        opacity: 1;
+
+        &:before {
+          content: '';
+          display: flex;
+          width: 23px;
+          height: 23px;
+          border-radius: 50px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translateY(-50%) translateX(-50%) scale(0.6);
+          opacity: 0;
+          transition: all .2s ease-in-out;
+          border: 2px solid var(--primary-color);
+        }
+
+        &.swiper-pagination-bullet-active {
+          background-color: var(--primary-color);
+
+          &:before {
+            transform: translateY(-50%) translateX(-50%) scale(1);
+            opacity: 1;
+          }
+        }
+
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+
+  .swiper-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    background-color: transparent;
+    border: 1px solid var(--border-color-1);
+    @media(max-width: $xxxl) {
+      display: none;
+    }
+
+    i {
+      color: var(--primary-color);
+      font-size: 18px;
+      transition: all .3s ease-in-out;
+    }
+
+    &.swiper-button-custom-next {
+      right: -100px;
+    }
+
+    &.swiper-button-custom-prev {
+      left: -100px;
+    }
+
+    &:hover {
+      background-color: var(--primary-color);
+      border: 1px solid var(--primary-color);
+
+      i {
+        color: var(--white-color);
+      }
+    }
+  }
+}

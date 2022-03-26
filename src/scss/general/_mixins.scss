@@ -1,0 +1,19 @@
+/*-------------------------------------------*\
+   mixins.scss
+
+   General mixins
+\*-------------------------------------------*/
+
+@mixin meta-text($color,$letter-spacing,$font-weight,$font-size) {
+  color: $color;
+  letter-spacing: $letter-spacing;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: 1;
+}
+
+@mixin organic($w,$h,$color) {
+  width: $w;
+  height: $h;
+  background-color: $color;
+}

@@ -1,0 +1,90 @@
+/*-------------------------------------------*\
+   content-section-type-11.scss
+
+   Content section type 11 styles
+\*-------------------------------------------*/
+
+.content-section-type-11 {
+  .inner-testimonials {
+    align-items: center;
+
+    .column {
+      &.testimonials-wrapper {
+        padding-right: 50px;
+        @media (max-width: $xxl) {
+          padding-right: 15px;
+        }
+        @media (max-width: $xl) {
+          padding: 0 15px;
+          min-width: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+      }
+
+      &.content-wrapper {
+        padding-left: 100px;
+        @media (max-width: $xxl) {
+          padding-left: 30px;
+        }
+        @media (max-width: $xl) {
+          padding: 0 15px;
+          width: 100%;
+          margin-top: 50px;
+          max-width: 700px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .upper-text {
+          font-weight: 500;
+          color: var(--primary-color);
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          font-size: 12px;
+          margin-bottom: 25px;
+          display: flex;
+          align-items: center;
+          @media (max-width: $xl) {
+           justify-content: center;
+          }
+          @media(max-width: $md) {
+            margin-bottom: 15px;
+          }
+          i {
+            font-size: 48px;
+            background: -webkit-linear-gradient(90deg, var(--primary-color), var(--primary-color-additional));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-right: 15px;
+            @media (max-width: $md) {
+              font-size: 36px;
+            }
+            @media (max-width: $sm) {
+              display: none;
+            }
+          }
+        }
+
+        .title {
+          margin-bottom: 20px;
+            @media (max-width: $xl) {
+              text-align: center;
+          }
+          @media(max-width: $md) {
+            margin-bottom: 15px;
+          }
+        }
+
+        .content {
+          padding-right: 75px;
+            @media (max-width: $xl) {
+              text-align: center;
+              padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

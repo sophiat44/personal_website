@@ -1,0 +1,111 @@
+/*-------------------------------------------*\
+   content-section-type-6.scss
+
+   Content section type 6 styles
+\*-------------------------------------------*/
+
+.content-section-type-6 {
+  .inner-wrapper {
+    align-items: center;
+
+    .column {
+
+      &.content-wrapper {
+        padding-left: 75px;
+        @media(max-width: $xl) {
+          padding-left: 40px;
+        }
+        @media(max-width: $lg) {
+          padding: 0 15px;
+          width: 100%;
+          min-width: 100%;
+          margin-top: 30px;
+        }
+
+        .upper-text {
+          font-weight: 500;
+          color: var(--primary-color);
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          font-size: 12px;
+          margin-bottom: 20px;
+          display: flex;
+          align-items: center;
+          @media(max-width: $lg) {
+            margin-bottom: 15px;
+          }
+
+          i {
+            font-size: 48px;
+            background: -webkit-linear-gradient(90deg, var(--primary-color), var(--primary-color-additional));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-right: 15px;
+            @media (max-width: $md) {
+              font-size: 36px;
+            }
+            @media (max-width: $sm) {
+              display: none;
+            }
+          }
+        }
+
+        .title {
+          margin-bottom: 30px;
+          @media(max-width: $lg) {
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      &.images-wrapper {
+        padding-right: 50px;
+        display: flex;
+        @media(max-width: $xl) {
+          padding-right: 40px;
+        }
+        @media(max-width: $lg) {
+          padding: 0 15px;
+        }
+        @media(max-width: $sm) {
+          flex-wrap: wrap;
+        }
+
+        .image-inner {
+          width: 50%;
+          height: auto;
+          border-radius: 10px;
+          overflow: hidden;
+          position: relative;
+          @media(max-width: $sm) {
+            min-width: 100%;
+            width: 100%;
+          }
+
+          &:first-child {
+            margin-right: 15px;
+            transform: translateY(-15px);
+            @media(max-width: $lg) {
+              transform: unset;
+            }
+            @media(max-width: $sm) {
+              margin-right: 0;
+              margin-bottom: 30px;
+            }
+          }
+
+          &:last-child {
+            margin-left: 15px;
+            transform: translateY(15px);
+            @media(max-width: $lg) {
+              transform: unset;
+            }
+            @media(max-width: $sm) {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

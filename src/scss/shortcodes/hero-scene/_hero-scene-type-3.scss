@@ -1,0 +1,120 @@
+/*-------------------------------------------*\
+   hero-scene-type-3.scss
+
+   Hero scene type 3 styles
+\*-------------------------------------------*/
+
+.hero-scene-type-3 {
+  width: 100%;
+  height: calc(100vh - var(--navigation-offset));
+  align-items: center;
+  display: flex;
+  @media (max-width: $lg) {
+    height: auto;
+  }
+
+  .inner-wrapper {
+    width: 100%;
+    height: 100%;
+    @media (max-width: $lg) {
+      padding: 150px 0;
+    }
+    @media (max-width: $md) {
+      padding: 100px 0;
+    }
+
+    .column {
+      position: relative;
+
+      &.content-wrapper {
+        padding-right: 75px;
+        display: flex;
+        align-items: center;
+        @media (max-width: $lg) {
+          padding: 0 15px;
+          width: 100%;
+          max-width: 700px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .content-inner {
+          max-width: 500px;
+          width: 100%;
+          @media (max-width: $lg) {
+            max-width: 100%;
+          }
+
+          .upper-text {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            color: var(--primary-color);
+            font-weight: 500;
+            @media (max-width: $lg) {
+              margin-bottom: 15px;
+              text-align: center;
+              justify-content: center;
+            }
+
+            &:before {
+              content: ' ';
+              display: flex;
+              width: 15px;
+              height: 1px;
+              margin-right: 15px;
+              background-color: var(--primary-color);
+            }
+          }
+
+          .title {
+            margin-bottom: 20px;
+            @media (max-width: $lg) {
+              margin-bottom: 15px;
+              text-align: center;
+            }
+          }
+
+          .content {
+            padding-right: 75px;
+            margin-bottom: 25px;
+            @media (max-width: $lg) {
+              margin-bottom: 20px;
+              padding-right: 0;
+              text-align: center;
+            }
+          }
+
+          .social-list {
+            @media (max-width: $lg) {
+              justify-content: center;
+            }
+          }
+        }
+      }
+
+      &.form-wrapper {
+        display: flex;
+        justify-content: center;
+        @media (max-width: $lg) {
+          margin-top: 50px;
+          justify-content: center;
+          min-width: 100%;
+          width: 100%;
+        }
+        @media (max-width: $md) {
+          margin-top: 30px;
+        }
+
+        .form-inner {
+          max-width: 500px;
+          width: 100%;
+          padding: 35px;
+          box-shadow: 0 5px 50px rgba(0, 0, 0, 0.15);
+          background-color: var(--white-color);
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}

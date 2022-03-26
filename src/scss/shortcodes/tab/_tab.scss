@@ -1,0 +1,35 @@
+/*-------------------------------------------*\
+   tab.scss
+
+   1.0 tab-type-1.scss
+   1.1 tab-type-2.scss
+   1.2 tab-type-3.scss
+\*-------------------------------------------*/
+
+// 1.0 tab-type-1.scss
+@import "tab-type-1";
+// 1.1 tab-type-2.scss
+@import "tab-type-2";
+// 1.2 tab-type-3.scss
+@import "tab-type-3";
+
+.tabs-wrapper {
+  width: 100%;
+
+  &[data-tab-animation-type="animation-type-1"] {
+    .tab-body {
+      .tab-content {
+        transform: scale(1.1);
+        opacity: 0;
+      }
+    }
+  }
+
+  &[data-tab-animation-type="animation-type-2"] {
+    .tab-body {
+      .tab-content {
+        opacity: 0;
+      }
+    }
+  }
+}

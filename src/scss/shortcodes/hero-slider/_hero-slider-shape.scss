@@ -1,0 +1,203 @@
+/*-------------------------------------------*\
+   hero-slider-shape.scss
+
+   Hero slider shape styles
+\*-------------------------------------------*/
+
+.hero-slider-shape {
+  width: 100%;
+  height: calc(100vh - var(--navigation-offset));
+  position: relative;
+
+  .inner-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .shape-overlay {
+      top: calc(50% - var(--navigation-offset) / 2);
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      width: 850px;
+      height: 850px;
+      overflow: hidden;
+      position: absolute;
+      background-color: var(--gray-color);
+      z-index: 1;
+      @media(max-width: $lg) {
+        width: 500px;
+        height: 500px;
+      }
+    }
+
+    .shape-wrapper {
+      top: calc(50% - var(--navigation-offset) / 2);
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      width: 550px;
+      height: 550px;
+      overflow: hidden;
+      position: absolute;
+      border-radius: 100%;
+      z-index: 10;
+      @media(max-width: $lg) {
+        width: 400px;
+        height: 400px;
+      }
+      @media(max-width: $sm) {
+        width: 325px;
+        height: 325px;
+      }
+
+      .slide {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        .inner-slide {
+          position: relative;
+          display: flex;
+          align-items: center;
+          background-position: center;
+          background-size: cover;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+
+          .content-wrapper {
+            width: 100%;
+            z-index: 3;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            padding: 0 50px;
+
+            .title {
+              color: transparent;
+              -webkit-text-stroke: 1px var(--white-color);
+              letter-spacing: 1px;
+              font-weight: 700;
+              transition: all .3s ease-in-out;
+              text-align: center;
+            }
+          }
+
+          &:after {
+            content: ' ';
+            display: flex;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            background-color: rgba(0, 0, 0, 0.5);
+          }
+        }
+
+        &:hover {
+          .content-wrapper {
+            .title {
+              color: var(--white-color);
+            }
+          }
+        }
+
+        &:not(:first-child) {
+          transform: translateY(100%);
+        }
+      }
+    }
+
+    .counter-slider {
+      position: absolute;
+      bottom: 30px;
+      left: calc(50% - 150px);
+      width: 300px;
+      z-index: 10;
+      @media(max-width: $md) {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        padding: 0 15px;
+        left: 0;
+      }
+
+      span {
+        line-height: 1;
+        font-weight: 500;
+
+        &.current, &.max {
+          width: 30px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @include meta-text(var(--black-color), 0.5px, 600, 13px);
+        }
+
+        &.divider {
+          background-color: var(--border-color-1);
+          width: 225px;
+          height: 1px;
+          margin: 0 20px;
+          display: block;
+          position: relative;
+
+          .pagination {
+            position: absolute;
+            z-index: 10;
+            background-color: var(--black-color);
+            top: 0;
+            left: 0;
+            height: 3px;
+            transform: translateY(-1px);
+          }
+        }
+      }
+    }
+
+    .slider-navigation {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 150px;
+      top: calc(50% - 35px);
+      left: calc(50% + 325px);
+      z-index: 10;
+      transform: translateY(-50%);
+      @media(max-width: $lg) {
+        left: calc(50% + 225px);
+      }
+      @media(max-width: $sm) {
+        left: 0;
+        top: unset;
+        bottom: 30px;
+      }
+
+      .button {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 1;
+        pointer-events: auto;
+
+        i {
+
+        }
+
+        &.disable-button {
+          opacity: 0.4;
+          pointer-events: none !important;
+        }
+      }
+    }
+  }
+}

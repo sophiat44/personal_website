@@ -1,0 +1,83 @@
+/*-------------------------------------------*\
+   posts-grid.scss
+
+   1.0 grid-default.scss
+   1.1 grid-creative.scss
+   1.2 grid-simple.scss
+   1.3 grid-modern.scss
+   1.4 grid-digital.scss
+\*-------------------------------------------*/
+
+// 1.0 grid-default.scss
+@import "grid-default";
+// 1.1 grid-creative.scss
+@import "grid-creative";
+// 1.2 grid-simple.scss
+@import "grid-simple";
+// 1.3 grid-modern.scss
+@import "grid-modern";
+// 1.4 grid-digital.scss
+@import "grid-digital";
+
+.posts-grid {
+
+  &.posts-grid-1-columns {
+    .grid-item {
+      max-width: 100%;
+    }
+  }
+
+  &.posts-grid-2-columns {
+    .grid-item {
+      max-width: 50%;
+      @media(max-width: $md) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &.posts-grid-3-columns {
+    .grid-item {
+      max-width: 33.333333%;
+      @media(max-width: $xl) {
+        max-width: 50%;
+      }
+      @media(max-width: $md) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &.posts-grid-4-columns {
+    .grid-item {
+      max-width: 25%;
+      @media(max-width: $xxxl) {
+        max-width: 33.33333%;
+      }
+      @media(max-width: $xl) {
+        max-width: 50%;
+      }
+      @media(max-width: $md) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &.posts-grid-5-columns {
+    .grid-item {
+      max-width: 20%;
+      @media(max-width: $xxxl) {
+        max-width: 25%;
+      }
+      @media(max-width: $xl) {
+        max-width: 33.33333%;
+      }
+      @media(max-width: $lg) {
+        max-width: 50%;
+      }
+      @media(max-width: $md) {
+        max-width: 100%;
+      }
+    }
+  }
+}

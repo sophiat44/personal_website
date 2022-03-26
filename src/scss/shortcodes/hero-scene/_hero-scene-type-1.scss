@@ -1,0 +1,179 @@
+/*-------------------------------------------*\
+   hero-scene-type-1.scss
+
+   Hero scene type 1 styles
+\*-------------------------------------------*/
+
+.hero-scene-type-1 {
+  width: 100%;
+  height: calc(100vh - var(--navigation-offset));
+  min-height: calc(100vh - var(--navigation-offset));
+  @media(max-width: $lg) {
+    height: auto;
+    min-height: auto;
+  }
+
+  .inner-wrapper {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    @media(max-width: $lg) {
+      padding: 150px 0;
+    }
+    @media(max-width: $md) {
+      padding: 100px 0;
+    }
+
+    .container {
+    }
+
+    .columns-wrapper {
+      align-items: center;
+    }
+
+    .column {
+      position: relative;
+
+      &.content-wrapper {
+
+        .content-inner {
+          position: relative;
+          z-index: 10;
+          max-width: 600px;
+          @media(max-width: $lg) {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 100%;
+          }
+
+          .title {
+            margin-bottom: 40px;
+            margin-top: 50px;
+            position: relative;
+            color: var(--white-color);
+            @media(max-width: $lg) {
+              text-align: center;
+            }
+            @media(max-width: $md) {
+              margin-bottom: 25px;
+              margin-top: 30px;
+            }
+
+            &:before {
+              content: ' ';
+              width: 75px;
+              height: 5px;
+              background-color: var(--primary-color);
+              top: -50px;
+              left: 0;
+              position: absolute;
+              @media(max-width: $lg) {
+                left: 50%;
+                transform: translateX(-50%);
+              }
+              @media(max-width: $md) {
+                top: -30px;
+              }
+            }
+          }
+
+          .social-list {
+            @media(max-width: $lg) {
+              justify-content: center;
+            }
+          }
+        }
+      }
+
+      &.counters-wrapper {
+        display: flex;
+        flex-direction: column;
+        padding-left: 150px;
+        flex-wrap: wrap;
+        justify-content: center;
+        @media(max-width: $xl) {
+          padding-left: 50px;
+        }
+        @media(max-width: $lg) {
+          padding: 0 15px;
+          margin-top: 75px;
+          flex-direction: row;
+        }
+        @media(max-width: $md) {
+          margin-top: 50px;
+        }
+        @media(max-width: $sm) {
+          margin-top: 30px;
+        }
+
+        .counter-column {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          @media(max-width: $lg) {
+            min-width: 50%;
+            width: 50%;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+          }
+          @media(max-width: $sm) {
+            min-width: 100%;
+            width: 100%;
+          }
+
+          .counter-wrapper {
+            margin-left: unset !important;
+            margin-right: 30px;
+            @media(max-width: $lg) {
+              padding: 0;
+              margin-right: 0;
+            }
+
+            .counter {
+              margin-bottom: 0;
+              min-width: 100px;
+              width: 100px;
+
+              &:after {
+                display: none;
+              }
+            }
+          }
+
+          .counter-title {
+            margin-bottom: 10px;
+            color: var(--white-color);
+            @media(max-width: $lg) {
+              text-align: center;
+              margin-bottom: 15px;
+            }
+          }
+
+          .counter-subtitle {
+            @include meta-text(var(--white-transparent-color), 0.5px, 500, 13px);
+            text-transform: uppercase;
+            @media(max-width: $lg) {
+              text-align: center;
+            }
+          }
+
+          &:not(:last-child) {
+            margin-bottom: 75px;
+            @media(max-width: $lg) {
+              margin-bottom: 0;
+            }
+            @media(max-width: $sm) {
+              margin-bottom: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .bottom-scroll-toggle {
+    margin-left: -10px;
+  }
+}

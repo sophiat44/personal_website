@@ -1,0 +1,20 @@
+/*-------------------------------------------*\
+   social-list-type-4.scss
+
+   Social list type 4 styles
+\*-------------------------------------------*/
+
+.social-list-type-4 {
+  li {
+    a {
+      width: 45px;
+      height: 45px;
+      border-radius: 100%;
+      color: var(--white-color);
+      transform: scale(1.01);
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+/*-------------------------------------------*\
+   content-section-type-25.scss
+
+   Content section type 25 styles
+\*-------------------------------------------*/
+
+.content-section-type-25 {
+  @media(max-width: $sm) {
+    padding-top: 50px;
+  }
+  .inner-wrapper {
+    align-items: center;
+
+    .title-wrapper {
+      padding-right: 100px;
+      @media(max-width: $lg) {
+        padding-right: 15px;
+        width: 100% !important;
+        min-width: 100% !important;
+        margin-bottom: 30px;
+      }
+
+      .title {
+        margin-bottom: 15px;
+        @media(max-width: $lg) {
+          margin-bottom: 10px;
+        }
+      }
+
+      .content {
+        margin-bottom: 25px;
+        @media(max-width: $lg) {
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    .list-wrapper {
+      padding-left: 50px;
+      @media(max-width: $lg) {
+        padding: 0 15px;
+      }
+      @media(max-width: $md) {
+        width: 50%;
+        min-width: 50%;
+      }
+      @media(max-width: $sm) {
+        width: 100%;
+        min-width: 100%;
+      }
+
+      &:not(:last-child) {
+        @media(max-width: $sm) {
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+}

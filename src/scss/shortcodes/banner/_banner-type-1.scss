@@ -1,0 +1,59 @@
+/*-------------------------------------------*\
+   banner-type-1.scss
+
+   Banner type 1 styles
+\*-------------------------------------------*/
+
+.banner-type-1 {
+  .inner-wrapper {
+    width: 100%;
+
+    .column {
+      @media(max-width: $xl) {
+        width: 100%;
+        padding: 0 15px !important;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-content: center;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .title {
+        max-width: 450px;
+        color: var(--white-color);
+        @media(max-width: $xl) {
+          margin-bottom: 15px;
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 100%;
+        }
+      }
+
+      .content {
+        color: var(--white-color);
+        margin-bottom: 30px;
+        @media(max-width: $xl) {
+          text-align: center;
+        }
+      }
+
+      .button-wrapper {
+        @media(max-width: $xl) {
+          justify-content: center;
+        }
+      }
+
+      &:first-child {
+        padding-right: 50px;
+      }
+
+      &:last-child {
+        padding-left: 50px;
+      }
+    }
+  }
+}

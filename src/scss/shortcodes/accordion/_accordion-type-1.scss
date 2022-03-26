@@ -1,0 +1,103 @@
+/*-------------------------------------------*\
+   accordion-type-1.scss
+
+   Accordions type 1 styles
+\*-------------------------------------------*/
+
+.accordion-type-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .accordion-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .item-header {
+      cursor: pointer;
+      padding: 15px 25px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all .2s ease-in-out;
+      background-color: var(--gray-color);
+      @media(max-width: $md) {
+        padding: 15px;
+      }
+      .header-title {
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: var(--black-color);
+        font-size: 13px;
+        transition: all .2s ease-in-out;
+        @media(max-width: $md) {
+          font-size: 12px;
+        }
+      }
+
+      &:after {
+        content: '\eaa0';
+        font-family: IcoFont;
+        font-size: 14px;
+        color: var(--black-color);
+        transition: all .2s ease-in-out;
+        @media(max-width: $md) {
+          font-size: 13px;
+        }
+      }
+    }
+
+    .item-body {
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      .body-content {
+        padding: 25px 25px 10px 25px;
+        overflow: hidden;
+        @media(max-width: $md) {
+          padding: 20px 15px 10px 15px;
+        }
+      }
+    }
+
+    &.accordion-arrow-active {
+      .item-header {
+        background-color: var(--primary-color);
+
+        .header-title {
+          color: var(--white-color);
+        }
+
+        &:after {
+          color: var(--white-color);
+        }
+      }
+    }
+
+    &:not(.accordion-item-active) {
+      .item-body {
+        height: 0;
+        opacity: 0;
+      }
+    }
+
+    &.accordion-arrow-active {
+      .item-header {
+        &:after {
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+}

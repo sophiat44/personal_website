@@ -1,0 +1,53 @@
+/*-------------------------------------------*\
+   banner-type-4.scss
+
+   Banner type 4 styles
+\*-------------------------------------------*/
+
+.banner-type-4 {
+  .inner-wrapper {
+    .banner-wrapper {
+      overflow: hidden;
+      border-radius: 10px;
+      padding: 100px 75px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media(max-width: $md) {
+        padding: 75px 50px;
+      }
+      @media(max-width: $sm) {
+        padding: 40px 15px;
+      }
+      .inner-banner{
+        max-width: 450px;
+        position: relative;
+        z-index: 10;
+        .title{
+          margin-bottom: 15px;
+          color: var(--white-color);
+          text-align: center;
+          @media(max-width: $md) {
+            margin-bottom: 10px;
+          }
+        }
+        .subtitle{
+          text-align: center;
+          color: var(--white-color);
+          @media(max-width: $sm) {
+            font-size: 14px;
+          }
+        }
+        .button-wrapper{
+          margin-top: 20px;
+          @media(max-width: $md) {
+            margin-top: 20px;
+          }
+          @media(max-width: $sm) {
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+  }
+}

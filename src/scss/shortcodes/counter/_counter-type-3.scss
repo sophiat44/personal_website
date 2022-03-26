@@ -1,0 +1,38 @@
+/*-------------------------------------------*\
+   counter-type-3.scss
+
+   Counter type 3 styles
+\*-------------------------------------------*/
+
+.counter-type-3 {
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .counter {
+    width: 125px;
+    height: 125px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    color: var(--white-color);
+    position: relative;
+    z-index: 10;
+    background: -webkit-linear-gradient(90deg, var(--primary-color), var(--primary-color-additional));
+  }
+
+  .title {
+    position: relative;
+    z-index: 10;
+    margin-top: 30px;
+    text-align: center;
+    @include meta-text(var(--black-color), 0.5px, 600, 14px);
+    text-transform: uppercase;
+  }
+}

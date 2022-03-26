@@ -1,0 +1,71 @@
+/*-------------------------------------------*\
+   container.scss
+
+   General container styles
+\*-------------------------------------------*/
+
+.container-wide {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 30px;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  @media(max-width: $md) {
+    padding: 0 15px;
+  }
+}
+
+.container-fluid {
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 30px;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  @media(max-width: $md) {
+    padding: 0 15px;
+  }
+}
+
+.container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 30px;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  @media(max-width: $xxl) {
+    max-width: 1200px;
+  }
+  @media(max-width: $xl) {
+    max-width: 1024px;
+  }
+  @media(max-width: $lg) {
+    max-width: 768px;
+  }
+  @media(max-width: $md) {
+    max-width: 576px;
+    padding: 0 15px;
+  }
+}
+
+.small-container {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 30px;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  @media(max-width: $lg) {
+    max-width: 768px;
+  }
+  @media(max-width: $md) {
+    max-width: 576px;
+    padding: 0 15px;
+  }
+}

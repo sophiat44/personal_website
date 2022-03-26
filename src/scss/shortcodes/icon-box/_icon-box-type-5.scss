@@ -1,0 +1,46 @@
+/*-------------------------------------------*\
+   icon-box-type-5.scss
+
+   Icon box type 5 styles
+\*-------------------------------------------*/
+
+.icon-box-type-5 {
+  .inner-service {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 250px;
+    padding: 40px 0;
+    @media (max-width: $sm) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: $md) {
+      padding: 20px 0;
+    }
+    @media (max-width: $sm) {
+      max-width: 100%;
+    }
+
+    .icon-wrapper {
+      margin-bottom: 25px;
+
+      i {
+        color: var(--white-color);
+        font-size: 48px;
+      }
+    }
+
+    .content-wrapper {
+      .title {
+        margin-bottom: 10px;
+        color: var(--white-color);
+      }
+
+      .content {
+        color: var(--white-transparent-color);
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+/*-------------------------------------------*\
+   hero-slider-parallax.scss
+
+   Hero slider parallax styles
+\*-------------------------------------------*/
+
+.hero-slider-parallax {
+  width: 100%;
+  position: relative;
+  height: 800px;
+  overflow: hidden;
+  @media(max-width: $md){
+    height: 500px;
+  }
+
+  .swiper-container {
+    height: 100%;
+    width: 100%;
+
+    .swiper-wrapper {
+      height: 100%;
+      width: 100%;
+
+      .swiper-slide {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+
+    .swiper-pagination-wrapper {
+      position: absolute;
+      right: 25px;
+      bottom: 25px;
+      z-index: 10;
+
+      .swiper-pagination-count {
+        display: flex;
+        align-items: center;
+        color: var(--white-color);
+        font-size: 12px;
+
+        span {
+          margin: 0 20px;
+          @include meta-text(var(--white-color), 0, 500, 14px);
+
+          &.swiper-pagination-current {
+
+          }
+
+          &.swiper-pagination-total {
+
+          }
+        }
+      }
+    }
+
+    .swiper-navigation {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      z-index: 10;
+      flex-direction: column;
+
+      .swiper-button {
+        cursor: pointer;
+        z-index: 10;
+        background-color: var(--white-color);
+        width: 55px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(-100%);
+
+        i {
+          font-size: 18px;
+        }
+
+        &.swiper-button-custom-prev {
+          transition: all .2s ease-in-out;
+        }
+
+        &.swiper-button-custom-next {
+          transition: all .3s ease-in-out;
+        }
+      }
+    }
+
+    &:hover {
+      .swiper-navigation {
+        .swiper-button {
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+}

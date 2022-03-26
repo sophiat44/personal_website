@@ -1,0 +1,185 @@
+/*-------------------------------------------*\
+   testimonials-slider-type-1.scss
+
+   Testimonials slider type 1 styles
+\*-------------------------------------------*/
+
+.testimonials-slider-type-1 {
+  max-width: 800px;
+  width: 100%;
+  margin: -20px -40px;
+  @media(max-width: $lg) {
+    max-width: 100%;
+    padding-right: 80px;
+  }
+  @media(max-width: $md) {
+    padding-right: 60px;
+  }
+  @media(max-width: $sm) {
+    padding-right: 0;
+  }
+
+  .inner-wrapper {
+    width: 100%;
+    position: relative;
+
+    .slides-container {
+      height: 800px;
+      overflow: hidden;
+
+      .slides-wrapper {
+
+        .slide {
+          padding: 20px 40px;
+          @media(max-width: $md) {
+            padding: 20px 30px;
+          }
+          @media(max-width: $sm) {
+            padding: 10px 0 20px 0;
+          }
+
+          .testimonial {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            height: 225px;
+            background-color: var(--white-color);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all .3s ease-in-out;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+            @media(max-width: $md) {
+              box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            }
+            @media(max-width: $sm) {
+              height: 235px;
+            }
+            .image-wrapper {
+              width: 245px;
+              height: 100%;
+              background-position: center;
+              background-size: cover;
+              min-width: 245px;
+              @media(max-width: $md) {
+                display: none;
+              }
+            }
+
+            .description {
+              height: 100%;
+              padding: 10px 30px;
+              display: flex;
+              justify-content: center;
+              flex-direction: column;
+              @media(max-width: $md) {
+                padding: 15px 30px;
+              }
+              @media(max-width: $sm) {
+                padding: 15px 40px 15px 25px;
+              }
+
+              .stars-list {
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+                @media(max-width: $sm) {
+                  margin-bottom: 10px;
+                }
+
+                li {
+                  line-height: 1;
+
+                  i {
+                    font-size: 16px;
+                    color: var(--yellow-color);
+                  }
+
+                  &:not(:last-child) {
+                    margin-right: 5px;
+                  }
+                }
+              }
+
+              .message {
+                margin-bottom: 10px;
+                font-size: 14px;
+
+                a {
+                  color: var(--primary-color);
+                }
+              }
+
+              .author-name {
+                margin-bottom: 5px;
+              }
+
+              .author-position {
+                @include meta-text(var(--meta-color), 0.5px, 500, 13px);
+              }
+            }
+          }
+
+          &.active-slide {
+            .testimonial {
+              box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+              @media(max-width: $sm) {
+                box-shadow: 0 15px 15px rgba(0, 0, 0, 0.05);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .slider-navigation {
+      position: absolute;
+      right: -20px;
+      top: 50%;
+      transform: translateY(-50%) translateX(50%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 11;
+      @media(max-width: $lg) {
+        right: -40px;
+      }
+      @media(max-width: $md) {
+        right: -30px;
+      }
+      @media(max-width: $sm) {
+        right: 30px;
+      }
+
+      .button-wrapper {
+        cursor: pointer;
+
+        .slider-button {
+          width: 50px;
+          cursor: pointer;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          i {
+            font-size: 32px;
+            transition: all .3s ease-in-out;
+          }
+
+          &.disable-button {
+            pointer-events: none !important;
+
+            i {
+              opacity: 0.5;
+            }
+          }
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 50px;
+        }
+      }
+    }
+  }
+}

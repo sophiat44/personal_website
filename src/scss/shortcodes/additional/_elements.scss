@@ -1,0 +1,71 @@
+/*-------------------------------------------*\
+   elements.scss
+
+   General demo-element styles
+\*-------------------------------------------*/
+
+.elements-section {
+  .map-contact {
+    height: 500px;
+  }
+
+  .background-wrapper {
+    height: 500px;
+    @media(max-width: $md) {
+      height: 400px;
+    }
+  }
+
+  .list {
+    @media(max-width: $lg) {
+      margin: 30px 0;
+    }
+  }
+
+  .timeline-type-1 {
+    @media(max-width: $lg) {
+      margin: 15px 0;
+    }
+  }
+
+  .element-item {
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--border-color-1);
+    }
+  }
+
+  .element-title {
+    text-align: center;
+  }
+
+  .element-typography-title {
+    margin-bottom: 10px;
+  }
+
+  .button-wrapper {
+    @media(max-width: $sm) {
+      flex-direction: column;
+    }
+
+    &:not(:last-child) {
+      margin: -5px -5px 15px -5px;
+    }
+  }
+
+  .alert-message {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  hr {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.elements-center {
+  display: flex;
+  justify-content: center;
+}

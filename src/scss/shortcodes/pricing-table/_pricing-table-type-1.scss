@@ -1,0 +1,91 @@
+/*-------------------------------------------*\
+   pricing-table-type-1.scss
+
+   Pricing table type 1 styles
+\*-------------------------------------------*/
+
+.pricing-table-type-1 {
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: var(--white-color);
+  border-radius: 5px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  @media(max-width: $xxl) {
+    padding: 40px 30px;
+  }
+
+  .price {
+    margin-bottom: 25px;
+    line-height: 1;
+    @media(max-width: $md) {
+      margin-bottom: 20px;
+    }
+    span {
+      &.sign {
+        font-size: 24px;
+        color: var(--meta-color);
+        @media(max-width: $sm) {
+          font-size: 20px;
+        }
+      }
+
+      &.num {
+        font-size: 56px;
+        font-weight: 600;
+        color: var(--black-color);
+        @media(max-width: $sm) {
+          font-size: 48px;
+        }
+      }
+
+      &.period {
+        font-size: 14px;
+        color: var(--meta-color);
+        @media(max-width: $sm) {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  .pricing-type {
+    height: 40px;
+    padding: 0 20px;
+    background-color: var(--gray-hard-color);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    cursor: unset;
+    @media(max-width: $md) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .features-list {
+    margin-bottom: 25px;
+    @media(max-width: $md) {
+      margin-bottom: 20px;
+    }
+
+    li {
+      color: var(--black-color);
+      font-size: 14px;
+      text-align: center;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .bottom-side {
+    width: 100%;
+  }
+}

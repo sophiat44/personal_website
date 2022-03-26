@@ -1,0 +1,145 @@
+/*-------------------------------------------*\
+   section.scss
+
+   General section styles
+\*-------------------------------------------*/
+
+section {
+  position: relative;
+}
+
+.extra-small-section {
+  padding: 50px 0;
+}
+
+.small-section {
+  padding: 75px 0;
+}
+
+.medium-section {
+  padding: 100px 0;
+  @media (max-width: $md) {
+    padding: 75px 0;
+  }
+}
+
+.large-section {
+  padding: 125px 0;
+  @media (max-width: $lg) {
+    padding: 100px 0;
+  }
+  @media (max-width: $md) {
+    padding: 75px 0;
+  }
+}
+
+.extra-large-section {
+  padding: 150px 0;
+  @media (max-width: $lg) {
+    padding: 125px 0;
+  }
+  @media (max-width: $md) {
+    padding: 100px 0;
+  }
+}
+
+.white-section {
+  background-color: var(--white-color);
+}
+
+.gray-section {
+  background-color: var(--gray-color);
+}
+
+.primary-color-section {
+  background-color: var(--primary-color);
+}
+
+.black-section {
+  background-color: var(--black-color);
+}
+
+.background-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.background-image-fixed {
+  background-attachment: fixed;
+}
+
+.background-pattern {
+  background-repeat: repeat;
+}
+
+.extra-large-offset-bottom {
+  padding-bottom: 150px;
+  @media (max-width: $lg) {
+    padding-bottom: 125px;
+  }
+  @media (max-width: $md) {
+    padding-bottom: 100px;
+  }
+}
+
+.large-offset-bottom {
+  padding-bottom: 125px;
+  @media (max-width: $lg) {
+    padding-bottom: 100px;
+  }
+  @media (max-width: $md) {
+    padding-bottom: 75px;
+  }
+}
+
+.medium-offset-bottom {
+  padding-bottom: 100px;
+  @media (max-width: $md) {
+    padding-bottom: 75px;
+  }
+}
+
+.small-offset-bottom {
+  padding-bottom: 75px;
+}
+
+.extra-small-offset-bottom {
+  padding-bottom: 50px;
+}
+
+.extra-large-offset-top {
+  padding-top: 150px;
+  @media (max-width: $lg) {
+    padding-top: 125px;
+  }
+  @media (max-width: $md) {
+    padding-top: 100px;
+  }
+}
+
+.large-offset-top {
+  padding-top: 125px;
+  @media (max-width: $lg) {
+    padding-top: 100px;
+  }
+  @media (max-width: $md) {
+    padding-top: 75px;
+  }
+}
+
+.medium-offset-top {
+  padding-top: 100px;
+  @media (max-width: $md) {
+    padding-top: 75px;
+  }
+}
+
+.small-offset-top {
+  padding-top: 75px;
+}
+
+.extra-small-offset-top {
+  padding-top: 50px;
+}

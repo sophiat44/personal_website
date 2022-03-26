@@ -1,0 +1,44 @@
+/*-------------------------------------------*\
+   list-type-4.scss
+
+   List type 4 styles
+\*-------------------------------------------*/
+
+.list-type-4 {
+  li {
+    display: flex;
+    align-items: center;
+
+    .icon-wrapper {
+      margin-right: 10px;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 30px;
+      transition: all .2s ease-in-out;
+
+      i {
+        transition: all .2s ease-in-out;
+        color: var(--black-color);
+      }
+    }
+
+    p {
+      font-size: 14px;
+      color: var(--black-color);
+      font-weight: 500;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid var(--border-color-1);
+      @media(max-width: $md) {
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@font-face {
+    font-family: "Satoshi";
+    src: url('../fonts/Satoshi/Satoshi-Bold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Satoshi";
+    src: url('../fonts/Satoshi/Satoshi-BoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Satoshi";
+    src: url('../fonts/Satoshi/Satoshi-Light.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Satoshi";
+    src: url('../fonts/Satoshi/Satoshi-LightItalic') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Satoshi";
+    src: url('../fonts/Satoshi/Satoshi-Medium.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Satoshi";
+    src: url('../fonts/Satoshi/Satoshi-MediumItalic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Zodiak";
+    src: url('../fonts/Zodiak-Light.ttf') format('truetype');
+    font-style: normal;
+}
+@font-face {
+    font-family: "Zodiak";
+    src: url('../fonts/Zodiak-LightItalic.ttf') format('truetype');
+    font-style: italic;
+}

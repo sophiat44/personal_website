@@ -1,0 +1,81 @@
+/*-------------------------------------------*\
+   accordion-type-2.scss
+
+   Accordions type 2 styles
+\*-------------------------------------------*/
+
+.accordion-type-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .accordion-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+
+    .item-header {
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all .3s ease-in-out;
+      padding: 15px 0;
+      @media(max-width: $md) {
+        padding: 10px 0;
+      }
+      .header-title {
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: var(--black-color);
+        font-size: 13px;
+      }
+
+      &:after {
+        content: '\eaa0';
+        font-family: IcoFont;
+        font-size: 14px;
+        color: var(--black-color);
+        transition: all .3s ease-in-out;
+        margin-left: 10px;
+      }
+    }
+
+    .item-body {
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      .body-content {
+        color: var(--text-color);
+        padding: 0 0 10px 0;
+        overflow: hidden;
+      }
+    }
+
+    &:not(.accordion-item-active) {
+      .item-body {
+        height: 0;
+        opacity: 0;
+      }
+    }
+
+    &.accordion-arrow-active {
+      .item-header {
+        .header-title {
+          color: var(--primary-color);
+        }
+
+        &:after {
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+}

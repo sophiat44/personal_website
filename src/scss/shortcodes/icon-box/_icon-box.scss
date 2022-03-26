@@ -1,0 +1,37 @@
+/*-------------------------------------------*\
+   icon-box.scss
+
+   1.0 icon-box-type-1.scss
+   1.1 icon-box-type-2.scss
+   1.2 icon-box-type-3.scss
+   1.3 icon-box-type-4.scss
+   1.4 icon-box-type-5.scss
+\*-------------------------------------------*/
+
+// 1.0 icon-box-type-1.scss
+@import "icon-box-type-1";
+// 1.1 icon-box-type-2.scss
+@import "icon-box-type-2";
+// 1.2 icon-box-type-3.scss
+@import "icon-box-type-3";
+// 1.3 icon-box-type-4.scss
+@import "icon-box-type-4";
+// 1.4 icon-box-type-5.scss
+@import "icon-box-type-5";
+
+.icon-boxes-wrapper{
+  margin: -40px 0;
+  @media (max-width: $md) {
+    margin: -20px 0;
+  }
+  .column{
+    @media (max-width: $md) {
+      min-width: 50%;
+      width: 50px;
+    }
+    @media (max-width: $sm) {
+      min-width: 100%;
+      width: 100px;
+    }
+  }
+}

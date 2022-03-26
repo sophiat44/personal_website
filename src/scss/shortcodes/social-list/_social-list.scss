@@ -1,0 +1,56 @@
+/*-------------------------------------------*\
+   social-list.scss
+
+   1.0 social-list-type-1.scss
+   1.1 social-list-type-2.scss
+   1.2 social-list-type-3.scss
+   1.3 social-list-type-4.scss
+   1.4 social-list-type-5.scss
+   1.5 social-list-type-6.scss
+\*-------------------------------------------*/
+
+// 1.0 social-list-type-1.scss
+@import "social-list-type-1";
+// 1.1 social-list-type-2.scss
+@import "social-list-type-2";
+// 1.2 social-list-type-3.scss
+@import "social-list-type-3";
+// 1.3 social-list-type-4.scss
+@import "social-list-type-4";
+// 1.4 social-list-type-5.scss
+@import "social-list-type-5";
+// 1.5 social-list-type-6.scss
+@import "social-list-type-6";
+
+.social-list {
+  display: flex;
+  margin: -6px;
+  align-items: center;
+
+  li {
+    margin: 6px;
+
+    a {
+      display: flex;
+      transition: all .3s ease-in-out;
+      align-items: center;
+      justify-content: center;
+
+      i {
+        font-size: 13px;
+      }
+    }
+  }
+
+  &.social-list-center {
+    justify-content: center;
+  }
+
+  &.social-list-start {
+    justify-content: flex-start;
+  }
+
+  &.social-list-end {
+    justify-content: flex-end;
+  }
+}

@@ -1,0 +1,64 @@
+/*-------------------------------------------*\
+   variables.scss
+
+   General variables
+\*-------------------------------------------*/
+
+:root {
+  // Primary template color
+  --primary-color: #4776E6;
+  // Additional template color
+  --primary-color-additional: #8e54e9;
+  // Primary template font
+  --primary-font: 'Poppins', sans-serif;
+  // White color
+  --white-color: #ffffff;
+   // Transparent color
+  --white-transparent-color: rgba(255, 255, 255, 0.7);
+   // Gray color
+  --gray-color: #F6F8FB;
+   // Dark gray color
+  --gray-hard-color: #f0f0f0;
+   // Black color
+  --black-color: #161616;
+   // Black warm color
+  --black-warm-color: #232323;
+   // Border color 1
+  --border-color-1: rgba(151, 151, 151, 0.2);
+   // Border color 2
+  --border-color-2: #EAEAEA;
+   // Text color
+  --text-color: #676767;
+   // Meta color
+  --meta-color: #888888;
+   // Yellow color
+  --yellow-color: #FEC42D;
+   // Red color
+  --red-color: #D93025;
+   // Success color
+  --success-color: #8BC34A;
+   // Info color
+  --info-color: #2196F3;
+   // Warning color
+  --warning-color: #FF5722;
+   // Danger color
+  --danger-color: #f44336;
+}
+
+/*-------------------------------------------*\
+   Breakpoints
+\*-------------------------------------------*/
+//xs - 375px
+$xs: 375px;
+//xs - 576px
+$sm: 576px;
+//xs - 768px
+$md: 768px;
+//xs - 1025px
+$lg: 1025px;
+//xs - 1201px
+$xl: 1201px;
+//xs - 1441px
+$xxl: 1440px;
+//xs - 1600px
+$xxxl: 1600px;

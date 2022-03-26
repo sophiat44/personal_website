@@ -1,0 +1,44 @@
+/*-------------------------------------------*\
+   banner-type-2.scss
+
+   Banner type 2 styles
+\*-------------------------------------------*/
+
+.banner-type-2 {
+  .inner-wrapper {
+    .content-wrapper {
+      max-width: 500px;
+      padding: 50px;
+      background-color: var(--white-color);
+      border-radius: 10px;
+      margin-right: auto;
+      @media(max-width: $md) {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 40px 30px;
+      }
+      @media(max-width: $sm) {
+        padding: 30px;
+      }
+
+      .title {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      .subtitle {
+        text-align: center;
+      }
+
+      .button {
+        margin-top: 25px;
+      }
+    }
+
+    .video-toggle-button {
+      @media(max-width: $lg) {
+        display: none;
+      }
+    }
+  }
+}

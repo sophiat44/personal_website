@@ -1,0 +1,50 @@
+/*-------------------------------------------*\
+   counter-type-2.scss
+
+   Counter type 2 styles
+\*-------------------------------------------*/
+
+.counter-type-2 {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .counter {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+    color: var(--black-color);
+    position: relative;
+    z-index: 10;
+
+    &:after {
+      content: ' ';
+      display: flex;
+      width: 125px;
+      height: 125px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      background-color: var(--gray-color);
+      z-index: -1;
+    }
+  }
+
+  .title {
+    position: relative;
+    z-index: 10;
+    margin-top: 50px;
+    text-align: center;
+    @include meta-text(var(--black-color), 0.5px, 600, 14px);
+    text-transform: uppercase;
+  }
+}

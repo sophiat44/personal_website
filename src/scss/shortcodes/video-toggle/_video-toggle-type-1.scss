@@ -1,0 +1,29 @@
+/*-------------------------------------------*\
+   video-toggle-type-1.scss
+
+   Video toggle type 1 styles
+\*-------------------------------------------*/
+
+.video-toggle-button-type-1 {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 100%;
+  border: 2px solid var(--primary-color);
+
+  i {
+    font-size: 18px;
+    color: var(--primary-color);
+  }
+
+  &:hover {
+    background-color: var(--primary-color);
+
+    i {
+      color: var(--white-color);
+    }
+  }
+}

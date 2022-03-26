@@ -1,0 +1,49 @@
+/*-------------------------------------------*\
+   content-section-type-19.scss
+
+   Content section type 19 styles
+\*-------------------------------------------*/
+
+.content-section-type-19 {
+  .inner-wrapper {
+    display: flex;
+    align-items: center;
+
+    .column {
+      &.content-wrapper {
+        padding-right: 75px;
+        @media(max-width: $xxl) {
+          padding-right: 50px;
+        }
+        @media(max-width: $lg) {
+          padding: 0 15px;
+          min-width: 100%;
+          width: 100%;
+        }
+
+        .title {
+          margin-bottom: 30px;
+          @media(max-width: $md) {
+            margin-bottom: 15px;
+          }
+        }
+      }
+
+      &.progress-bar-wrapper {
+        padding-left: 50px;
+        @media(max-width: $xl) {
+          padding-left: 50px;
+        }
+        @media(max-width: $lg) {
+          padding: 0 15px;
+          margin-top: 50px;
+          min-width: 100%;
+          width: 100%;
+        }
+        @media(max-width: $md) {
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+}

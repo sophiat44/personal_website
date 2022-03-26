@@ -1,0 +1,96 @@
+/*-------------------------------------------*\
+   page-header-type-1.scss
+
+   Page header type 1 styles
+\*-------------------------------------------*/
+
+.page-header-type-1 {
+  .inner-wrapper {
+    display: flex;
+    @media(max-width: $sm) {
+      padding: 75px 0;
+    }
+
+    .column {
+      &.content-wrapper {
+        padding-right: 100px;
+        @media (max-width: $xl) {
+          padding-right: 15px;
+        }
+        @media (max-width: $lg) {
+          padding: 0 15px;
+          min-width: 100%;
+          width: 100%;
+        }
+
+        .upper-text {
+          font-weight: 600;
+          color: var(--primary-color);
+          letter-spacing: 1px;
+          font-size: 12px;
+          margin-bottom: 20px;
+          display: flex;
+          align-items: center;
+          text-transform: uppercase;
+          @media(max-width: $sm) {
+            justify-content: center;
+          }
+
+          &:before {
+            content: ' ';
+            display: flex;
+            width: 25px;
+            height: 1px;
+            background-color: var(--primary-color);
+            margin-right: 15px;
+          }
+        }
+
+        .title {
+          color: var(--white-color);
+          @media(max-width: $sm) {
+            text-align: center;
+          }
+        }
+      }
+
+      &.video-toggle-wrapper {
+        @media (max-width: $lg) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .bottom-panel {
+    padding: 75px 0;
+    border-top: 1px solid var(--white-transparent-color);
+    @media (max-width: $xl) {
+      padding: 50px 0;
+    }
+    @media (max-width: $lg) {
+      padding: 25px 0;
+    }
+
+    .inner-wrapper {
+      display: flex;
+      @media(max-width: $sm) {
+        padding: 25px 0;
+      }
+      .column {
+        @media (max-width: $xl) {
+          min-width: 50%;
+          width: 50%;
+        }
+        @media (max-width: $md) {
+          min-width: 50%;
+          width: 50%;
+        }
+        @media (max-width: $sm) {
+          min-width: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

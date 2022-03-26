@@ -1,0 +1,49 @@
+/*-------------------------------------------*\
+   team-member-type-3.scss
+
+   Team member type 3 styles
+\*-------------------------------------------*/
+
+.team-member-type-3 {
+
+  .image-wrapper {
+    min-height: 550px;
+    width: 100%;
+    position: relative;
+    @media(max-width: $sm) {
+      min-height: 450px;
+    }
+    .description {
+      position: absolute;
+      bottom: 40px;
+      left: 40px;
+      width: calc(100% - 80px);
+      padding: 30px;
+      background-color: var(--white-color);
+      @media(max-width: $sm) {
+        left: 20px;
+        bottom: 20px;
+        width: calc(100% - 40px);
+      }
+      .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .member-name{
+          margin-top: 15px;
+        }
+
+        .member-position {
+          @include meta-text(var(--meta-color), 0.5px, 500, 12px);
+          text-transform: uppercase;
+        }
+
+        .social-list {
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+}

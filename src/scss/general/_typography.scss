@@ -1,0 +1,120 @@
+/*-------------------------------------------*\
+   typography.scss
+
+   General typography styles
+\*-------------------------------------------*/
+
+i {
+  line-height: 1;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black-color);
+}
+
+p {
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+ul, ol {
+  li {
+    list-style-type: none;
+  }
+}
+
+h1 {
+  font-size: 52px;
+  letter-spacing: -1.5px;
+  @media(max-width: $xl) {
+    font-size: 48px;
+    letter-spacing: -1.3px;
+  }
+  @media(max-width: $xl) {
+    font-size: 44px;
+    letter-spacing: -1.2px;
+  }
+  @media(max-width: $md) {
+    font-size: 38px;
+    letter-spacing: -1.1px;
+  }
+  @media(max-width: $sm) {
+    font-size: 36px;
+    letter-spacing: -1px;
+  }
+}
+
+h2 {
+  font-size: 44px;
+  letter-spacing: -1.2px;
+  @media(max-width: $xxl) {
+    font-size: 38px;
+    letter-spacing: -1.1px;
+  }
+  @media(max-width: $xl) {
+    font-size: 36px;
+    letter-spacing: -1px;
+  }
+  @media(max-width: $md) {
+    font-size: 32px;
+    letter-spacing: -0.9px;
+  }
+  @media(max-width: $sm) {
+    font-size: 28px;
+    letter-spacing: -0.8px;
+  }
+}
+
+h3 {
+  font-size: 36px;
+  letter-spacing: -1px;
+  @media(max-width: $xxl) {
+    font-size: 32px;
+    letter-spacing: -0.9px;
+  }
+  @media(max-width: $xl) {
+    font-size: 26px;
+    letter-spacing: -0.7px;
+  }
+  @media(max-width: $sm) {
+    font-size: 24px;
+    letter-spacing: -0.6px;
+  }
+}
+
+h4 {
+  font-size: 28px;
+  letter-spacing: -0.8px;
+  @media(max-width: $xl) {
+    font-size: 26px;
+    letter-spacing: -0.7px;
+  }
+  @media(max-width: $sm) {
+    font-size: 24px;
+    letter-spacing: -0.6px;
+  }
+}
+
+h5 {
+  font-size: 22px;
+  letter-spacing: -0.5px;
+  @media(max-width: $sm) {
+    font-size: 20px;
+  }
+}
+
+h6 {
+  font-size: 18px;
+  letter-spacing: -0.3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+textarea, input, fieldset, button {
+  font-family: var(--primary-font);
+}

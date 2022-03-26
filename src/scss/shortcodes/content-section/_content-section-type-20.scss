@@ -1,0 +1,76 @@
+/*-------------------------------------------*\
+   content-section-type-20.scss
+
+   Content section type 20 styles
+\*-------------------------------------------*/
+
+.content-section-type-20 {
+  @media(max-width: $lg) {
+    padding-bottom: 0;
+  }
+  .inner-wrapper {
+    align-items: center;
+
+    .column {
+      &.images-wrapper {
+        padding-right: 30px;
+        @media(max-width: $lg) {
+          padding: 0 15px;
+        }
+        @media(max-width: $md) {
+          margin-bottom: 15px;
+          min-width: 50%;
+          width: 50%;
+        }
+        @media(max-width: $sm) {
+          min-width: 100%;
+          width: 100%;
+        }
+
+        img {
+          border-radius: 5px;
+        }
+      }
+
+      &.content-wrapper {
+        padding-left: 75px;
+        @media(max-width: $xl) {
+          padding-left: 40px;
+        }
+        @media(max-width: $lg) {
+          min-width: 100%;
+          width: 100%;
+          padding: 0 15px;
+          margin-top: 20px;
+          padding-bottom: 50px;
+          border-bottom: 5px dashed var(--border-color-1);
+          margin-bottom: 60px;
+        }
+
+        .title {
+          margin-bottom: 15px;
+          @media(max-width: $lg) {
+            margin-bottom: 10px;
+          }
+        }
+
+        .content {
+          padding-right: 50px;
+          @media(max-width: $md) {
+            padding-right: 0;
+          }
+        }
+
+        .social-list {
+          margin-top: 20px;
+          @media(max-width: $lg) {
+            margin-top: 15px;
+          }
+          @media(max-width: $md) {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}

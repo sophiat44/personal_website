@@ -1,0 +1,12 @@
+/*-------------------------------------------*\
+   content-section-type-12.scss
+
+   Content section type 12 styles
+\*-------------------------------------------*/
+
+.content-section-type-12 {
+  margin-top: -100px;
+  @media(max-width: $xxl) {
+    margin-top: 0;
+  }
+}

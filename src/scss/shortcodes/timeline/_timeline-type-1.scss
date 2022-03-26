@@ -1,0 +1,76 @@
+/*-------------------------------------------*\
+   timeline-type-1.scss
+
+   Timeline type 1 styles
+\*-------------------------------------------*/
+
+.timeline-type-1 {
+  display: flex;
+  flex-direction: column;
+
+  .timeline-part {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    text-transform: uppercase;
+    @include meta-text(var(--black-color), 0.5px, 600, 13px);
+    transition: all .3s ease-in-out;
+
+    &:before {
+      content: ' ';
+      display: flex;
+      width: 14px;
+      height: 14px;
+      background-color: var(--primary-color);
+      border-radius: 15px;
+      z-index: 11;
+      margin-right: 20px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 60px;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 2px;
+        height: calc(100% + 60px);
+        position: absolute;
+        left: 6px;
+        background-color: var(--border-color-1);
+        top: calc(100% - 1px);
+        z-index: 10;
+      }
+    }
+
+    .before-circle {
+      position: absolute;
+      top: -8px;
+      left: -8px;
+      width: 30px;
+      height: 30px;
+      border-radius: 25px;
+      background-color: var(--primary-color);
+      opacity: 0;
+      transform: scale(0.2);
+      transition: all .3s ease-in-out;
+      z-index: 1;
+    }
+
+    &:hover, &.active-part {
+      color: var(--primary-color)!important;
+
+      .before-circle {
+        transform: scale(1);
+        opacity: 0.2;
+      }
+    }
+  }
+
+  &.white-style {
+    .timeline-part:not(.active-part) {
+      color: var(--white-color);
+    }
+  }
+}

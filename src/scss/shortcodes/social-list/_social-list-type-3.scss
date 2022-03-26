@@ -1,0 +1,45 @@
+/*-------------------------------------------*\
+   social-list-type-3.scss
+
+   Social list type 3 styles
+\*-------------------------------------------*/
+
+.social-list-type-3 {
+  li {
+    a {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      border-radius: 100%;
+      background-color: var(--primary-color);
+
+      .back-icon {
+
+      }
+
+      i {
+        position: absolute;
+        color: var(--white-color);
+        transition: all .3s ease-in-out;
+
+        &.back-icon {
+          transform: translateY(-60px);
+        }
+      }
+      &:hover{
+        i{
+          &.front-icon {
+            transform: translateY(60px);
+          }
+          &.back-icon {
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+  }
+}

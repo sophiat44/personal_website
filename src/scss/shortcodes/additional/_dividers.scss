@@ -1,0 +1,49 @@
+/*-------------------------------------------*\
+   dividers.scss
+
+   General divider styles
+\*-------------------------------------------*/
+
+hr {
+  &.hr-dashed {
+    border-style: dashed;
+    width: 100%;
+    border-color: var(--border-color-1);
+  }
+
+  &.hr-dotted {
+    border-style: dotted;
+    width: 100%;
+    border-color: var(--border-color-1);
+  }
+
+  &.hr-solid {
+    border-style: solid;
+    width: 100%;
+    border-color: var(--border-color-1);
+  }
+}
+
+.hr-type-1 {
+  border: 1px;
+}
+
+.hr-type-2 {
+  border: 2px;
+}
+
+.hr-type-3 {
+  border: 3px;
+}
+
+.hr-type-4 {
+  border: 4px;
+}
+
+.hr-type-5 {
+  border: 5px;
+}
+
+.hr-type-6 {
+  border: 6px;
+}

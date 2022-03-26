@@ -1,0 +1,22 @@
+/*-------------------------------------------*\
+   content-section-type-7.scss
+
+   Content section type 7 styles
+\*-------------------------------------------*/
+
+.content-section-type-7 {
+  .inner-wrapper {
+    display: flex;
+    margin: 0 -75px;
+
+    .column {
+      width: 33.333333333%;
+      min-width: 33.333333333%;
+      padding: 0 75px;
+
+      .title {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

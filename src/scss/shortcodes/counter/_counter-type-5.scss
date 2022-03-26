@@ -1,0 +1,24 @@
+/*-------------------------------------------*\
+   counter-type-5.scss
+
+   Counter type 5 styles
+\*-------------------------------------------*/
+
+.counter-type-5 {
+  .title {
+    margin-bottom: 30px;
+    text-align: center;
+    @include meta-text(var(--primary-color), 0.5px, 600, 14px);
+    text-transform: uppercase;
+  }
+  .counter {
+    color: var(--primary-color);
+    position: relative;
+    z-index: 10;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+}

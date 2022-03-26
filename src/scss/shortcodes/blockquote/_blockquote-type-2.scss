@@ -1,0 +1,47 @@
+/*-------------------------------------------*\
+   blockquote-type-2.scss
+
+   Blockquote type 2 styles
+\*-------------------------------------------*/
+
+.blockquote-type-2 {
+  padding: 50px 50px 45px 50px;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  position: relative;
+  @media(max-width: $md) {
+    padding: 30px;
+  }
+  @media(max-width: $sm) {
+    padding: 30px 25px 25px 25px;
+  }
+
+  &:before {
+    content: '\efce';
+    font-family: IcoFont;
+    font-size: 28px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: var(--white-color);
+    opacity: 0.2;
+    text-align: center;
+    line-height: 1;
+    @media(max-width: $sm) {
+      font-size: 24px;
+    }
+  }
+
+  .quote {
+    color: var(--white-color);
+    margin-bottom: 5px;
+    @media(max-width: $sm) {
+      margin-bottom: 0;
+    }
+  }
+
+  .author {
+    @include meta-text(var(--white-transparent-color), 0.5px, 500, 13px);
+    text-transform: uppercase;
+  }
+}

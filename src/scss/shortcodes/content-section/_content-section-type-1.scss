@@ -1,0 +1,75 @@
+/*-------------------------------------------*\
+   content-section-type-1.scss
+
+   Content section type 1 styles
+\*-------------------------------------------*/
+
+.content-section-type-1 {
+  .inner-wrapper {
+    padding: 50px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .content-wrapper {
+      max-width: 700px;
+    }
+  }
+
+  .left-side {
+    @media(max-width: $xl) {
+      min-width: 100%;
+      width: 100%;
+    }
+
+    .column {
+      @media(max-width: $xl) {
+        min-width: 50%;
+        width: 50%;
+      }
+      @media(max-width: $md) {
+        min-width: 50%;
+        width: 50%;
+      }
+      @media(max-width: $sm) {
+        min-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  .right-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 75px;
+    @media(max-width: $xl) {
+      min-width: 100%;
+      width: 100%;
+      min-height: 400px;
+      padding: 50px 30px;
+    }
+    @media(max-width: $lg) {
+      min-height: 300px;
+      padding: 30px;
+    }
+    .right-side-inner {
+      .background-title {
+        color: var(--white-color);
+        position: relative;
+        z-index: 10;
+        max-width: 450px;
+        margin-bottom: 30px;
+        @media(max-width: $xl) {
+          text-align: center;
+        }
+      }
+
+      .button-wrapper {
+        @media(max-width: $xl) {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

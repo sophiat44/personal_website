@@ -1,0 +1,79 @@
+/*-------------------------------------------*\
+   page-header-type-single.scss
+
+   Page header type single styles
+\*-------------------------------------------*/
+
+.page-header-type-single {
+  .page-header-inner {
+    overflow: hidden;
+
+    .inner-wrapper {
+      height: 600px;
+      padding-bottom: 50px;
+      @media (max-width: $md) {
+        height: 400px;
+      }
+      .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+        z-index: 10;
+        height: 100%;
+        width: 100%;
+
+        .title {
+          text-align: center;
+          color: var(--white-color);
+          margin-bottom: 15px;
+        }
+
+        .meta-wrapper {
+          display: flex;
+          flex-wrap: wrap;
+
+          .meta-data {
+            display: flex;
+            align-items: center;
+            @include meta-text(var(--white-transparent-color), 0.5px, 500, 12px);
+            text-transform: uppercase;
+            margin: 7px 15px;
+
+            i {
+              margin-right: 7px;
+              font-size: 12px;
+            }
+
+            .archive-list {
+              display: flex;
+
+              li {
+                display: flex;
+
+                &:not(:last-child) {
+                  &:after {
+                    content: ',';
+                    display: flex;
+                    line-height: 1;
+                    margin-right: 4px;
+                  }
+                }
+              }
+            }
+          }
+
+          a {
+            color: var(--white-transparent-color);
+            transition: all .2s ease-in-out;
+
+            &:hover {
+              color: var(--white-color);
+            }
+          }
+        }
+      }
+    }
+  }
+}

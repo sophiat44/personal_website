@@ -1,0 +1,27 @@
+/*-------------------------------------------*\
+   client-type-1.scss
+
+   Client type 1 styles
+\*-------------------------------------------*/
+
+.client-type-1 {
+  width: 100%;
+
+  .inner-wrapper {
+    border: 1px solid var(--border-color-1);
+    border-radius: 5px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease-in-out;
+    img{
+      max-width: 150px;
+    }
+
+
+    &:hover {
+      border: 1px solid var(--white-color);
+    }
+  }
+}

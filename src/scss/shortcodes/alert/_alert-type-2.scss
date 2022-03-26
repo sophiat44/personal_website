@@ -1,0 +1,59 @@
+/*-------------------------------------------*\
+   alert-type-2.scss
+
+   Alert type 2 styles
+\*-------------------------------------------*/
+
+.alert-message-type-2 {
+  padding: 10px 25px;
+  height: 60px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include meta-text(var(--text-color), 0.5px, 500, 13px);
+
+  i {
+    font-size: 18px;
+  }
+
+  .close-btn {
+    cursor: pointer;
+  }
+
+  &.success-alert {
+    border: 1px solid var(--success-color);
+    color: var(--success-color);
+
+    i {
+      color: var(--success-color);
+    }
+  }
+
+  &.info-alert {
+    border: 1px solid var(--info-color);
+    color: var(--info-color);
+
+    i {
+      color: var(--info-color);
+    }
+  }
+
+  &.warning-alert {
+    border: 1px solid var(--warning-color);
+    color: var(--warning-color);
+
+    i {
+      color: var(--warning-color);
+    }
+  }
+
+  &.danger-alert {
+    border: 1px solid var(--danger-color);
+    color: var(--danger-color);
+
+    i {
+      color: var(--danger-color);
+    }
+  }
+}

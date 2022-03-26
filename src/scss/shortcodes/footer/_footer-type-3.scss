@@ -1,0 +1,45 @@
+/*-------------------------------------------*\
+   footer-type-3.scss
+
+   Footer type 3 styles
+\*-------------------------------------------*/
+
+.footer-type-3 {
+  background-color: var(--black-color);
+
+  .inner-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .logo-wrapper {
+      max-width: 160px;
+      max-height: 80px;
+      margin-bottom: 55px;
+      @media (max-width: $sm) {
+        margin-bottom: 40px;
+      }
+    }
+
+    .social-list {
+      margin-bottom: 40px;
+      @media (max-width: $sm) {
+        margin-bottom: 25px;
+      }
+    }
+
+    .copyright-wrapper {
+      .copyright {
+        text-align: center;
+        font-weight: 500;
+        font-size: 14px;
+        color: var(--white-color);
+
+        a {
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+}

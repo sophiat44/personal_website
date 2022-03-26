@@ -1,0 +1,26 @@
+/*-------------------------------------------*\
+   client-type-3.scss
+
+   Client type 3 styles
+\*-------------------------------------------*/
+
+.client-type-3 {
+  width: 100%;
+
+  .inner-wrapper {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    transition: all .3s ease-in-out;
+    opacity: 0.5;
+    align-items: center;
+
+    img {
+      max-width: 200px;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

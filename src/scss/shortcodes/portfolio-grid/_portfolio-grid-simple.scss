@@ -1,0 +1,82 @@
+/*-------------------------------------------*\
+   portfolio-grid-simple.scss
+
+   Portfolio grid simple styles
+\*-------------------------------------------*/
+
+.portfolio-grid-simple {
+  margin: -15px;
+
+  .grid-item {
+    padding: 15px;
+
+    .inner-item {
+      .image-wrapper {
+        width: 100%;
+        height: 400px;
+        position: relative;
+
+        .link-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .description {
+        padding: 30px;
+        background-color: var(--gray-color);
+
+        .title {
+          margin-bottom: 15px;
+          line-height: 1;
+
+          a {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            i {
+              transition: all .3s ease-in-out;
+              opacity: 0;
+              font-size: 20px;
+              transform: translateX(-15px);
+            }
+          }
+        }
+
+        .category-list {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+
+          .category {
+            display: flex;
+            align-items: center;
+            @include meta-text(var(--primary-color), 0, 500, 13px);
+
+            &:not(:last-child) {
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+
+    &:hover {
+      .inner-item {
+        .description {
+          .title {
+            i {
+              transform: translateX(0);
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}

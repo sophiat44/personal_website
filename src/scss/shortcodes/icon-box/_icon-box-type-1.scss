@@ -1,0 +1,35 @@
+/*-------------------------------------------*\
+   icon-box-type-1.scss
+
+   Icon box type 1 styles
+\*-------------------------------------------*/
+
+.icon-box-type-1 {
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+  max-width: 250px;
+  @media (max-width: $md) {
+    padding: 20px 0;
+  }
+  @media (max-width: $sm) {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  .icon-wrapper {
+    margin-right: 20px;
+
+    i {
+      font-size: 48px;
+      color: var(--white-color);
+    }
+  }
+
+  .title {
+    @include meta-text(var(--white-color), 1px, 500, 12px);
+    text-transform: uppercase;
+  }
+}

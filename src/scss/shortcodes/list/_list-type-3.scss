@@ -1,0 +1,50 @@
+/*-------------------------------------------*\
+   list-type-3.scss
+
+   List type 3 styles
+\*-------------------------------------------*/
+
+.list-type-3 {
+  li {
+    display: flex;
+    align-items: center;
+
+    .icon-wrapper {
+      margin-right: 15px;
+      width: 29px;
+      height: 29px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 30px;
+      min-width: 30px;
+      border: 1px solid var(--primary-color);
+      transition: all .2s ease-in-out;
+
+      i {
+        color: var(--primary-color);
+        transition: all .2s ease-in-out;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      color: var(--primary-color);
+      font-weight: 500;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+
+    &:hover {
+      .icon-wrapper {
+        background-color: var(--primary-color);
+
+        i {
+          color: var(--white-color);
+        }
+      }
+    }
+  }
+}

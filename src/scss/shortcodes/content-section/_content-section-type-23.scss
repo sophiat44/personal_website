@@ -1,0 +1,58 @@
+/*-------------------------------------------*\
+   content-section-type-23.scss
+
+   Content section type 23 styles
+\*-------------------------------------------*/
+
+.content-section-type-23 {
+  .inner-wrapper {
+    align-items: center;
+
+    .title-wrapper {
+      padding-left: 50px;
+      padding-right: 15px;
+      @media(max-width: $xl) {
+        min-width: 100%;
+        width: 100%;
+        padding: 0 15px;
+        margin-top: 30px;
+      }
+      @media(max-width: $md) {
+        margin-top: 0;
+      }
+    }
+
+    .content-wrapper {
+      padding-right: 30px;
+      padding-left: 15px;
+      @media(max-width: $xl) {
+        padding: 0 15px;
+        min-width: 50%;
+        width: 50%;
+      }
+      @media(max-width: $md) {
+        min-width: 100%;
+        width: 100%;
+      }
+
+      .title {
+        margin-bottom: 15px;
+      }
+
+      .subtitle {
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        @include meta-text(var(--meta-color), 0.5px, 500, 13px);
+      }
+
+      .content {
+      }
+
+      &:not(:last-child) {
+        @media(max-width: $md) {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}

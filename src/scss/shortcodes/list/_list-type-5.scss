@@ -1,0 +1,40 @@
+/*-------------------------------------------*\
+   list-type-5.scss
+
+   List type 5 styles
+\*-------------------------------------------*/
+
+.list-type-5 {
+  li {
+    display: flex;
+    align-items: center;
+
+    .icon-wrapper {
+      margin-right: 15px;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 30px;
+      transition: all .2s ease-in-out;
+      background-color: var(--gray-color);
+      border-radius: 5px;
+
+      i {
+        color: var(--primary-color);
+        transition: all .2s ease-in-out;
+      }
+    }
+
+    p {
+      text-transform: uppercase;
+      line-height: normal!important;
+      @include meta-text(var(--black-color), 0.5px, 500, 12px);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+}

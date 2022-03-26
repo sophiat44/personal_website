@@ -1,0 +1,116 @@
+/*-------------------------------------------*\
+   team-member-slider-type-2.scss
+
+   Team member slider type 2 styles
+\*-------------------------------------------*/
+
+.team-member-slider-type-2 {
+  position: relative;
+  margin-bottom: 75px;
+  @media(max-width: $md) {
+    margin-bottom: 50px;
+  }
+
+  .swiper-container {
+
+  }
+
+  .swiper-pagination-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -75px;
+    z-index: 10;
+    @media(max-width: $md) {
+      bottom: -50px;
+    }
+    width: 100%;
+
+    .swiper-pagination {
+      display: flex;
+
+      .swiper-pagination-bullet {
+        width: 4px;
+        height: 4px;
+        background-color: var(--primary-color);
+        border-radius: 10px;
+        margin-left: 0;
+        margin-right: 0;
+        position: relative;
+        transition: all .2s ease-in-out;
+        opacity: 1;
+
+        &:before {
+          content: '';
+          display: flex;
+          width: 23px;
+          height: 23px;
+          border-radius: 50px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translateY(-50%) translateX(-50%) scale(0.6);
+          opacity: 0;
+          transition: all .2s ease-in-out;
+          border: 2px solid var(--primary-color);
+        }
+
+        &.swiper-pagination-bullet-active {
+          background-color: var(--primary-color);
+
+          &:before {
+            transform: translateY(-50%) translateX(-50%) scale(1);
+            opacity: 1;
+          }
+        }
+
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+
+  .swiper-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    background-color: transparent;
+    border: 1px solid var(--border-color-1);
+    @media(max-width: $xxxl) {
+      display: none;
+    }
+
+    i {
+      color: var(--primary-color);
+      font-size: 18px;
+      transition: all .3s ease-in-out;
+    }
+
+    &.swiper-button-custom-next {
+      right: -150px;
+    }
+
+    &.swiper-button-custom-prev {
+      left: -150px;
+    }
+
+    &:hover {
+      background-color: var(--primary-color);
+      border: 1px solid var(--primary-color);
+
+      i {
+        color: var(--white-color);
+      }
+    }
+  }
+}

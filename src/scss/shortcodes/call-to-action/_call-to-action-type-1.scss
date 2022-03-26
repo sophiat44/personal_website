@@ -1,0 +1,39 @@
+/*-------------------------------------------*\
+   call-to-action-type-1.scss
+
+   Call to action type 1 styles
+\*-------------------------------------------*/
+
+.call-to-action-type-1 {
+  .inner-wrapper {
+    align-items: center;
+
+    .column {
+      @media (max-width: $xl) {
+        width: 100%;
+        padding: 0 15px!important;
+      }
+
+      .button-wrapper {
+        @media (max-width: $xl) {
+          justify-content: center;
+        }
+      }
+    }
+
+    .content-wrapper {
+      padding-right: 50px;
+      @media (max-width: $xl) {
+        padding-right: 0;
+      }
+
+      .title {
+        color: var(--white-color);
+        @media (max-width: $xl) {
+          text-align: center;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}

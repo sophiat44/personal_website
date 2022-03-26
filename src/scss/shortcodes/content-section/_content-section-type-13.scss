@@ -1,0 +1,21 @@
+/*-------------------------------------------*\
+   content-section-type-13.scss
+
+   Content section type 13 styles (Coming soon)
+\*-------------------------------------------*/
+
+.content-section-type-13 {
+  .recent-posts {
+    .column {
+      padding: 0;
+      @media(max-width: $xxl) {
+        min-width: 50%;
+        width: 50%;
+      }
+      @media(max-width: $md) {
+        min-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

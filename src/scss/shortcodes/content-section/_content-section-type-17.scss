@@ -1,0 +1,40 @@
+/*-------------------------------------------*\
+   content-section-type-17.scss
+
+   Content section type 17 styles
+\*-------------------------------------------*/
+
+.content-section-type-17 {
+  .inner-wrapper {
+    align-items: center;
+    margin: 0 -75px;
+    @media(max-width: $lg) {
+      margin: 0 -15px;
+    }
+    .column {
+      padding: 0 75px;
+      @media(max-width: $lg) {
+        padding: 0 15px;
+      }
+      &.content-wrapper {
+        .content-item {
+          .title {
+            color: var(--white-color);
+            margin-bottom: 15px;
+            font-size: 32px;
+          }
+
+          .content {
+            color: var(--white-color);
+            margin-bottom: 25px;
+          }
+        }
+        &:last-child{
+          @media(max-width: $lg) {
+            margin-top: 50px;
+          }
+        }
+      }
+    }
+  }
+}

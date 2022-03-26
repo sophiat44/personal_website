@@ -1,0 +1,125 @@
+/*-------------------------------------------*\
+   portfolio-grid-modern.scss
+
+   Portfolio grid modern styles
+\*-------------------------------------------*/
+
+.portfolio-grid-modern {
+  margin: -15px;
+
+  .grid-item {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .inner-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform-style: preserve-3d;
+
+      .image-wrapper {
+        position: relative;
+        border-radius: 5px;
+        overflow: hidden;
+
+        .link-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          width: 100%;
+          height: 100%;
+        }
+
+        .tilt-wrapper {
+          .link-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+          }
+        }
+
+        &:after {
+          content: ' ';
+          display: flex;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: -webkit-linear-gradient(90deg, var(--primary-color), var(--primary-color-additional));
+          opacity: 0;
+          transition: all .3s ease-in-out;
+        }
+      }
+
+      .description {
+        width: auto;
+        position: absolute;
+
+        transform-style: preserve-3d;
+
+        .title {
+          a{
+            color: var(--white-color);
+          }
+          font-size: 24px;
+          font-weight: 600;
+          color: var(--white-color);
+          transition: all .2s ease-in-out;
+          opacity: 0;
+          transform: translateY(5px) translateZ(50px);
+        }
+
+        .category-list {
+          opacity: 0;
+          display: flex;
+          justify-content: center;
+          margin-top: 20px;
+          transition: all .3s ease-in-out;
+          transform: translateZ(35px) translateY(15px);
+
+          .category {
+            @include meta-text(var(--white-color), 0.5px, 500, 13px);
+
+            &:not(:last-child) {
+              &:after {
+                content: ',';
+                margin-right: 5px;
+                color: var(--white-color);
+              }
+            }
+          }
+        }
+      }
+
+      &:hover {
+        .image-wrapper {
+          &:after {
+            opacity: 0.8;
+          }
+        }
+
+        .description {
+          .title {
+            transform: translateZ(50px) translateY(0);
+          }
+
+          .category-list {
+            transform: translateZ(35px) translateY(0);
+          }
+
+          .title, .category-list {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

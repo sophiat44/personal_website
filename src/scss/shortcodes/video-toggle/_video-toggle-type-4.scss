@@ -1,0 +1,49 @@
+/*-------------------------------------------*\
+   video-toggle-type-4.scss
+
+   Video toggle type 4 styles
+\*-------------------------------------------*/
+
+.video-toggle-button-type-4 {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white-color);
+  border-radius: 100px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  overflow: hidden;
+
+  i {
+    z-index: 10;
+    transition: all .3s ease-in-out;
+    position: relative;
+    font-size: 18px;
+  }
+
+  &:before {
+    top: 0;
+    left: 0;
+    position: absolute;
+    content: ' ';
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    z-index: 1;
+    transition: all .3s ease-in-out;
+    transform: translateY(100%);
+  }
+
+  &:hover {
+    i {
+      color: var(--white-color);
+    }
+
+    &:before {
+      transform: translateY(0);
+    }
+  }
+}

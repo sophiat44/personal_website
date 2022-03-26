@@ -1,0 +1,74 @@
+/*-------------------------------------------*\
+   grid-modern.scss
+
+   Posts grid modern styles
+\*-------------------------------------------*/
+
+.posts-grid-modern {
+  margin: -15px;
+
+  .grid-item {
+    padding: 15px;
+
+    .inner-wrapper {
+      .post-header {
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 20px;
+        height: 300px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        .link-overlay{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+        }
+
+        .category-label {
+          padding: 0 15px;
+          height: 40px;
+          border-radius: 5px;
+          background-color: var(--primary-color);
+          @include meta-text(var(--white-color), 0, 600, 12px);
+          position: absolute;
+          top: 30px;
+          left: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-transform: uppercase;
+          z-index: 10;
+        }
+      }
+
+      .post-body {
+        margin-bottom: 15px;
+
+        .post-title {
+          font-weight: 600;
+
+          a {
+            transition: all .2s ease-in-out;
+          }
+
+          &:hover {
+            a {
+              color: var(--primary-color);
+            }
+          }
+        }
+      }
+
+      .post-footer {
+        @include meta-text(var(--meta-color), 0, 400, 12px);
+        font-style: italic;
+      }
+    }
+  }
+}

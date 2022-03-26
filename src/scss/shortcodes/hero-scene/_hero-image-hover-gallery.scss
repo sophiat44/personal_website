@@ -1,0 +1,147 @@
+/*-------------------------------------------*\
+   hero-image-hover-gallery.scss
+
+   Hero image hover gallery styles
+\*-------------------------------------------*/
+
+.hero-image-hover-gallery {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 700px;
+  justify-content: center;
+  @media(max-width: $lg) {
+    height: 600px;
+  }
+
+  .inner-wrapper {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+
+    .image-wrapper {
+      width: 100%;
+      height: 100%;
+      transform: scale(1.1);
+
+      .inner-image {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        transition: all .5s ease-in-out;
+        opacity: 0;
+        transform: scale(1);
+        filter: blur(3px);
+
+        &.active-image {
+          filter: blur(0);
+          opacity: 1;
+          transform: scale(1.1);
+        }
+      }
+
+      &:after {
+        content: ' ';
+        display: flex;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+    }
+
+    .content-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      padding: 150px 0;
+      @media(max-width: $lg) {
+        padding: 100px 0;
+      }
+      @media(max-width: $md) {
+        padding: 75px 0;
+      }
+      @media(max-width: $sm) {
+        padding: 50px 0;
+      }
+
+      .images-links {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        li {
+          display: flex;
+          line-height: 1;
+          align-items: center;
+          transition: all .55s ease-in-out;
+          @media(max-width: $lg) {
+            margin: 15px !important;
+          }
+
+          .title {
+            padding: 15px;
+            cursor: pointer;
+            -webkit-text-stroke: 1px var(--white-color);
+            letter-spacing: 1px;
+            color: var(--white-color);
+            transition: all .55s ease-in-out;
+            @media(max-width: $lg) {
+              padding: 0;
+            }
+
+            &:hover {
+              color: transparent;
+            }
+          }
+
+          &:not(:last-child) {
+            margin-right: 60px;
+            @media(max-width: $lg) {
+              margin-right: 0;
+            }
+          }
+
+          &:before {
+            transition: all .55s ease-in-out;
+            content: ' ';
+            display: flex;
+            width: 50px;
+            height: 1px;
+            background-color: var(--meta-color);
+            margin-right: 20px;
+            @media(max-width: $lg) {
+              display: none;
+            }
+          }
+
+          &.disable-link {
+            opacity: 0.4;
+            filter: blur(2px);
+
+            &:before {
+              transform: translateX(-10px);
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

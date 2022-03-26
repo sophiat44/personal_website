@@ -1,0 +1,87 @@
+/*-------------------------------------------*\
+   tab-type-1.scss
+
+   Tab type 1 styles
+\*-------------------------------------------*/
+
+.tab-type-1 {
+
+  .tab-header {
+    display: flex;
+    border-bottom: 1px solid var(--border-color-1);
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    @media(max-width: $md) {
+      margin-bottom: 15px;
+    }
+
+    .tab-item {
+      padding: 0 40px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include meta-text(var(--black-color), 0, 500, 13px);
+      letter-spacing: unset;
+      position: relative;
+      transition: all .3s ease-in-out;
+      cursor: pointer;
+      z-index: 10;
+      @media(max-width: $md) {
+        padding: 0 30px;
+        height: 55px;
+      }
+      @media(max-width: $sm) {
+        padding: 0 15px;
+        height: 50px;
+      }
+
+      &:after {
+        content: ' ';
+        display: flex;
+        background: -webkit-linear-gradient(90deg, var(--primary-color), var(--primary-color-additional));
+        width: 100%;
+        height: 0;
+        opacity: 0;
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        transition: all .2s ease-in-out;
+        z-index: -1;
+      }
+
+      &.active-item {
+        color: var(--primary-color);
+        @media(max-width: $sm) {
+          color: var(--white-color);
+        }
+
+        &:after {
+          height: 3px;
+          opacity: 1;
+          @media(max-width: $sm) {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .tab-body {
+    position: relative;
+    width: 100%;
+
+    .tab-content {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      width: 100%;
+
+      .content {
+        text-align: center;
+        max-width: 700px;
+      }
+    }
+  }
+}

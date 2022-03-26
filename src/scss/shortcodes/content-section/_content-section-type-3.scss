@@ -1,0 +1,145 @@
+/*-------------------------------------------*\
+   content-section-type-3.scss
+
+   Content section type 3 styles
+\*-------------------------------------------*/
+
+.content-section-type-3 {
+  .inner-wrapper {
+    align-items: center;
+
+    .column {
+
+      &.content-wrapper {
+        padding-right: 75px;
+        @media (max-width: $xl) {
+          padding: 0 15px;
+          width: 100%;
+          margin-bottom: 50px;
+          max-width: 700px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        @media (max-width: $xxl) {
+          padding-right: 25px;
+        }
+
+        .title {
+          margin-bottom: 20px;
+          @media(max-width: $xl) {
+            text-align: center;
+          }
+          @media(max-width: $md) {
+            margin-bottom: 15px;
+          }
+        }
+
+        .content {
+          padding-right: 150px;
+          @media(max-width: $xl) {
+            text-align: center;
+            padding-right: 0;
+          }
+        }
+
+        .button-wrapper {
+          margin-top: 25px;
+          @media(max-width: $xl) {
+            justify-content: center;
+          }
+          @media(max-width: $md) {
+            margin-top: 20px;
+          }
+        }
+      }
+
+      &.services-wrapper {
+        padding-left: 75px;
+        @media (max-width: $xxl) {
+          padding-left: 30px;
+        }
+        @media(max-width: $xl) {
+          padding: 0 15px !important;
+          width: 100%;
+          max-width: 700px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .content-row {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+
+          .side {
+            min-width: 50%;
+            width: 50%;
+            @media (max-width: $md) {
+              min-width: 100%;
+              width: 100%;
+            }
+
+            .service {
+              border-radius: 15px;
+              box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+              background-color: var(--white-color);
+              padding: 40px;
+              cursor: pointer;
+
+              .icon-wrapper {
+                margin-bottom: 15px;
+
+                i {
+                  background: -webkit-linear-gradient(90deg, var(--primary-color), var(--primary-color-additional));
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  font-size: 42px;
+                }
+              }
+
+              .title {
+                margin-bottom: 10px;
+              }
+
+              .content {
+                font-size: 14px;
+                margin-bottom: 20px;
+              }
+
+              .button-wrapper {
+              }
+
+              &:not(:last-child) {
+                margin-bottom: 40px;
+                @media (max-width: $md) {
+                  margin-bottom: 30px;
+                }
+              }
+            }
+
+            &.left-side {
+              padding: 0 20px 75px 0;
+              @media(max-width: $xl) {
+                padding: 0 20px 0 0;
+              }
+              @media (max-width: $md) {
+                padding: 0;
+                margin-bottom: 30px;
+              }
+            }
+
+            &.right-side {
+              padding: 75px 0 0 20px;
+              @media(max-width: $xl) {
+                padding: 0 0 0 20px;
+              }
+              @media (max-width: $md) {
+                padding: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
