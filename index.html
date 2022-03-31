@@ -90,7 +90,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#newsletter" class="button button-animation-type-1 button-small button-rounded">Newsletter<i
+                                <a href="javascript:;" onclick="ml_account('webforms', '4872476', 'l6i9n1', 'show')" class="button button-animation-type-1 button-small button-rounded">Newsletter<i
                                     class="icofont-envelope right-icon"></i></a>
                             </li>
                         </ul>
@@ -384,7 +384,7 @@
                         <a href="mailto:sophia.yaya.tang@gmail.com" target = "_blank" rel="noreferrer noopener">Email</a>
                     </li>
                     <li>
-                        <a href="#newsletter" target = "_blank" rel="noreferrer noopener">Newsletter</a>
+                        <a href="javascript:;" onclick="ml_account('webforms', '4872476', 'l6i9n1', 'show')" target = "_blank" rel="noreferrer noopener">Newsletter</a>
                     </li>
                     <li>
                         <a href="https://www.girltechboss.com/podcast" target = "_blank" rel="noreferrer noopener">Podcast</a>
@@ -458,6 +458,18 @@ $(document).ready(function(){
 <script src="app/assets/js/wow.min.js"></script>
 <!-- Main -->
 <script src="app/assets/js/main.js"></script>
+<!-- MailerLite Universal -->
+<script>
+    (function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){
+    var c={ a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);}
+    f.q=f.q||[];m[e]=m[e]||f.bind(f.q);m[e].q=m[e].q||f.q;r=a.createElement(i);
+    var _=a.getElementsByTagName(i)[0];r.async=1;r.src=l+'?v'+(~~(new Date().getTime()/1000000));
+    _.parentNode.insertBefore(r,_);})(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
+    
+    var ml_account = ml('accounts', '3486695', 'y0k0p8f2g1', 'load');
+</script>
+<!-- End MailerLite Universal -->
+
 </body>
 <!-- /BODY -->
 </html>
